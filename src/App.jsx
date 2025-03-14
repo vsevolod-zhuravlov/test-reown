@@ -11,6 +11,7 @@ const projectId = "ff90ca3a23aaaaf5a5ee02df6bf92ff2"
 const networks = [sepolia, mainnet]
 
 createAppKit({
+  themeMode: "light",
   adapters: [new EthersAdapter()],
   networks,
   projectId,
