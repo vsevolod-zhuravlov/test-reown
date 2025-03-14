@@ -13,17 +13,17 @@ export default function ConnectButton() {
     if (chainId == 1) {
       return "Ethereum"
     } else {
-      return "Arbitrum One"
+      return "Sepolia"
     }
   }
 
-  function renderIcon() {
-    if (chainId == 1) {
-      return icons.ethereum
-    } else {
-      return icons.arbitrum
-    }
-  }
+  // function renderIcon() {
+  //   if (chainId == 1) {
+  //     return icons.ethereum
+  //   } else {
+  //     return icons.arbitrum
+  //   }
+  // }
 
   function renderAccount() {
     if(isConnected) {
@@ -41,7 +41,7 @@ export default function ConnectButton() {
     <div className={styles["connect"]}>
       <button className={styles["network-button"]} onClick={() => open({ view: 'Networks' })}>
         <div className={styles["icon"]}>
-          <img src={renderIcon()} alt="Chain Icon" />
+          <img src={icons.ethereum} alt="Chain Icon" />
         </div>
         <div className={styles["network-name"]}>{renderNetwork()}</div>
       </button>
